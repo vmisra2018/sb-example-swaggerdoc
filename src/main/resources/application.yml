@@ -7,4 +7,4 @@ logging:
                 boot:
                     autoconfigure: ERROR
 server:
-    forward-headers-strategy: framework
+    forward-headers-strategy: NATIVE
