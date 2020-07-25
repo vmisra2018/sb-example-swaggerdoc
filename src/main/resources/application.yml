@@ -6,3 +6,5 @@ logging:
             springframework:
                 boot:
                     autoconfigure: ERROR
+server:
+    forward-headers-strategy: framework
