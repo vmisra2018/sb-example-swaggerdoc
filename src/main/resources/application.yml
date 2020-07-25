@@ -6,5 +6,7 @@ logging:
             springframework:
                 boot:
                     autoconfigure: ERROR
-server:
-    forward-headers-strategy: NATIVE
+#server:
+   # forward-headers-strategy: NATIVE
+   # tomcat:
+    #    remote-ip-header: x-forwarded-for
