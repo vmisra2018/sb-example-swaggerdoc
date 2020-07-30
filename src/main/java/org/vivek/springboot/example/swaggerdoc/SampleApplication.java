@@ -25,14 +25,16 @@ public class SampleApplication {
 		SpringApplication.run(SampleApplication.class, args);
 	}
 
-	/*
-	 * @Bean public OpenAPI customOpenAPI() { return new OpenAPI().info(new
-	 * Info().title("title").version("version").description("description"))
-	 * .addSecurityItem(new SecurityRequirement().addList("my security"))
-	 * .components(new Components().addSecuritySchemes("my security", new
-	 * SecurityScheme().name("my security").type(SecurityScheme.Type.HTTP).scheme(
-	 * "bearer"))); }
-	 */
+	@Bean
+    public OpenAPI customOpenAPI(@Value("${application-description}") String appDesciption, @Value("${application-version}") String appVersion) {
+     return new OpenAPI()
+          .info(new Info()
+          .title("sample application API")
+          .version(appVersion)
+          .description(appDesciption)
+          .termsOfService("http://swagger.io/terms/")
+          .license(new License().name("Apache 2.0").url("http://springdoc.org")));
+    }
 
 	@Bean
 	public OperationCustomizer customGlobalHeaders() {
@@ -50,17 +52,7 @@ public class SampleApplication {
 	}
 
 	
-	 @Bean
-	    public OpenAPI customOpenAPI(@Value("${application-description}") String appDesciption, @Value("${application-version}") String appVersion) {
-	     return new OpenAPI()
-	          .info(new Info()
-	          .title("sample application API")
-	          .version(appVersion)
-	          .description(appDesciption)
-	          .termsOfService("http://swagger.io/terms/")
-	          .license(new License().name("Apache 2.0").url("http://springdoc.org")));
-	    }
-
+	
 	/*
 	 * @Bean ForwardedHeaderFilter forwardedHeaderFilter() { return new
 	 * ForwardedHeaderFilter(); }

@@ -10,3 +10,14 @@ logging:
    # forward-headers-strategy: NATIVE
    # tomcat:
     #    remote-ip-header: x-forwarded-for
+application:
+    clients:
+        - username: rw
+          password: secret123
+          roles: READ,WRITE
+        - username: r
+          password: secret123
+          roles: READ
+        - username: w
+          password: secret123
+          roles: WRITE

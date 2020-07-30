@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="swaggerdoc" />
+        <module name="secure-spring-actuator-only" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="secure-spring-actuator-only" target="11" />
+      <module name="swaggerdoc" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="secure-spring-actuator-only" options="-parameters" />
+      <module name="swaggerdoc" options="-parameters" />
+    </option>
+  </component>
+</project>

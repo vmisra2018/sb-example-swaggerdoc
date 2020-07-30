@@ -1,4 +1,4 @@
-package org.vivek.springboot.example.swaggerdoc;
+package org.vivek.springboot.example.swaggerdoc.api.rest;
 
 import java.net.http.HttpRequest;
 
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.vivek.springboot.example.swaggerdoc.model.Person;
 
 @RestController
 public class PersonController {
